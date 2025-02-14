@@ -36,14 +36,14 @@ watch([minDate, maxDate, availableUnits], () => {
     <div class="configuration">
       <h4>Configuration</h4>
       <div>
-        <label for="min-date"> Min duration: </label>
-        <input type="number" id="min-date" v-model="minDuration" v-integers-only />
-        <button v-if="minDate" @click="minDate = undefined">clear</button>
+        <label for="min-duration"> Min duration: </label>
+        <input type="number" id="min-duration" v-model="minDuration" v-integers-only />
+        <button v-if="minDuration" @click="minDuration = undefined">clear</button>
       </div>
       <div>
-        <label for="min-date"> Max duration: </label>
-        <input type="number" id="min-date" v-model="maxDuration" v-integers-only />
-        <button v-if="minDate" @click="minDate = undefined">clear</button>
+        <label for="max-duration"> Max duration: </label>
+        <input type="number" id="max-duration" v-model="maxDuration" v-integers-only />
+        <button v-if="maxDuration" @click="maxDuration = undefined">clear</button>
       </div>
       <div>
         <label for="min-date"> Min date: </label>
