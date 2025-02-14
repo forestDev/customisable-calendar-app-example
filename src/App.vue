@@ -47,13 +47,23 @@ watch([minDate, maxDate, availableUnits], () => {
       </div>
       <div>
         <label for="min-date"> Min date: </label>
-        <input type="date" id="min-date" v-model="minDate" />
+        <input
+          type="date"
+          id="min-date"
+          @keydown="($event) => $event.preventDefault()"
+          v-model="minDate"
+        />
         <button v-if="minDate" @click="minDate = undefined">clear</button>
       </div>
 
       <div>
         <label for="max-date"> Max date: </label>
-        <input type="date" id="max-date" v-model="maxDate" />
+        <input
+          type="date"
+          id="max-date"
+          @keydown="($event) => $event.preventDefault()"
+          v-model="maxDate"
+        />
         <button v-if="maxDate" @click="maxDate = undefined">clear</button>
       </div>
 

@@ -191,13 +191,21 @@ watch(showDateTo, (show) => {
         v-model="draftModel.dateFrom"
         :max="maxDateFrom"
         :min="minDate"
+        @keydown="($event) => $event.preventDefault()"
         type="date"
       />
     </div>
 
     <div class="field" v-if="showDateTo">
       <label for="date-to">Date to</label>
-      <input id="date-to" v-model="draftModel.dateTo" :max="maxDate" :min="minDateTo" type="date" />
+      <input
+        id="date-to"
+        v-model="draftModel.dateTo"
+        :max="maxDate"
+        :min="minDateTo"
+        @keydown="($event) => $event.preventDefault()"
+        type="date"
+      />
     </div>
   </div>
 </template>
